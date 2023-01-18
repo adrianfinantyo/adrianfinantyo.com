@@ -67,7 +67,7 @@ const Home = () => {
             fontSize={{ base: "xs", md: "md", xl: "lg" }}
           >
             <AlertIcon />
-            Hi! I'm a frontend engineer based in Indonesia.
+            Hi! I&aposm a frontend engineer based in Indonesia.
           </Alert>
           <Heading fontSize="4xl">Adrian Finantyo</Heading>
           <Text fontSize={{ base: "sm", md: "lg", xl: "xl" }}>

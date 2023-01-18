@@ -1,0 +1,52 @@
+on:
+  push: # Trigger the workflow on push or pull request
+    branches:
+      - Production
+    pull_request:
+      branches:
+        - Production
+
+name: 🔥 Adrian's Website CI/CD
+jobs:
+  web-deploy:
+    name: 🚀 Deploy to adrianfinantyo.com
+    runs-on: ubuntu-latest
+    environment: production
+    env:
+      CI: false
+    if: github.ref == 'refs/heads/Production'
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v2
+
+      - name: Use Node.js 16
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: 🔨 Build Project
+        run: |
+          npm install
+          npm run build
+
+      - name: 🖨️ List output files
+        run: find .next/ -print
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.3
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          exclude: |
+            node_modules/**
+            .github/**
+            .gitignore
+            .vscode/**
+            .env
+            .env.local
+            .env.development
+            .env.production
+            .env.test
+            .gitattributes
+            .git/**
