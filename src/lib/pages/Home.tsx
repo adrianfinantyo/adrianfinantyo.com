@@ -7,7 +7,7 @@ import {
   Text,
   VStack,
   Img,
-  Link,
+  Link as ChakraLink,
   Grid,
   GridItem,
   AspectRatio,
@@ -17,12 +17,14 @@ import {
 import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const MotionImg = motion(Img);
+const MotionLink = motion(Link);
 
 const ProjectCard = (props: any) => {
   return (
-    <GridItem as={Link} href="/" pos="relative">
+    <GridItem as={ChakraLink} href="/" pos="relative">
       <AspectRatio ratio={16 / 10} w="100%" bgColor="white" borderRadius="15px" overflow="hidden">
         <MotionImg
           style={{ _hover: { cursor: "pointer " } }}
@@ -43,6 +45,17 @@ const ProjectCard = (props: any) => {
   );
 };
 
+const RecentPostCard = () => {
+  return (
+    <MotionLink href="/post/1" style={{ width: "100%" }}>
+      <VStack alignItems="flex-start" color="initial">
+        <Heading size="lg">Judul Post</Heading>
+        <Text>January 19, 2023 - 3 mins read</Text>
+      </VStack>
+    </MotionLink>
+  );
+};
+
 const Home = () => {
   return (
     <PageLayout>
@@ -59,6 +72,7 @@ const Home = () => {
           flexDir="column"
           alignItems={{ base: "center", lg: "flex-start" }}
           spacing={{ base: "1rem", md: "2rem" }}
+          textAlign={{ base: "center", lg: "left" }}
         >
           <Alert
             status="info"
@@ -67,14 +81,14 @@ const Home = () => {
             fontSize={{ base: "xs", md: "md", xl: "lg" }}
           >
             <AlertIcon />
-            Hi! I&aposm a frontend engineer based in Indonesia.
+            Hi! I&apos;m a frontend engineer based in Indonesia.
           </Alert>
-          <Heading fontSize="4xl">Adrian Finantyo</Heading>
+          <Heading fontSize={{ base: "2xl", md: "3xl", xl: "5xl" }}>Adrian Finantyo</Heading>
           <Text fontSize={{ base: "sm", md: "lg", xl: "xl" }}>
             Undergraduate Informatics Student at{" "}
-            <Link href="https://umn.ac.id/" target="_blank">
+            <ChakraLink href="https://umn.ac.id/" target="_blank">
               Universitas Multimedia Nusantara, Tangerang
-            </Link>
+            </ChakraLink>
           </Text>
         </VStack>
         <Box w={{ base: "280px", md: "300px", xl: "500px" }}>
@@ -84,7 +98,7 @@ const Home = () => {
       {/* // Projects */}
       <Box mt="3rem">
         <Heading>Projects</Heading>
-        <Grid py="1rem" mt="1rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">
+        <Grid py="1rem" my="1rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">
           <ProjectCard />
           <ProjectCard />
           <ProjectCard />
@@ -95,8 +109,10 @@ const Home = () => {
       {/* Post */}
       <Box mt="3rem">
         <Heading>Recent Posts</Heading>
-        <VStack mt="1rem">
-          <Link href="/">adawd</Link>
+        <VStack my="1rem" py="1rem" spacing="2rem">
+          <RecentPostCard />
+          <RecentPostCard />
+          <RecentPostCard />
         </VStack>
         <ReadMoreBtn href="/post">view all posts</ReadMoreBtn>
       </Box>

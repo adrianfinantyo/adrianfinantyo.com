@@ -4,6 +4,7 @@ import { Box, ChakraProvider, useColorModeValue, extendTheme, Container } from "
 import { mode } from "@chakra-ui/theme-tools";
 import Navbar from "@/lib/components/Navbar";
 import Footer from "@/lib/components/Footer";
+import { NextSeo } from "next-seo";
 
 const config = {
   useSystemColorMode: true,
