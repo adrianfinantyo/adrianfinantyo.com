@@ -19,16 +19,13 @@ var Post = defineDocumentType(() => ({
     title: { type: "string", required: true },
     date: { type: "string", required: true },
     cover: { type: "string", required: true },
-    thumbnail: { type: "string" },
     description: { type: "string" },
-    legacyID: { type: "string" },
     published: { type: "boolean", required: true },
     tags: { type: "list", of: { type: "string" } },
     readTime: {
       type: "nested",
       of: ReadTime
-    },
-    cover_image: { type: "string" }
+    }
   },
   computedFields: {
     readTime: {
@@ -40,12 +37,42 @@ var Post = defineDocumentType(() => ({
       type: "string",
       // eslint-disable-next-line no-underscore-dangle
       resolve: (post) => post._raw.sourceFileName.replace(/\.md$|\.mdx$/, "")
+    },
+    slug: {
+      type: "string",
+      resolve: (post) => post.title.toLowerCase().replace(/ /g, "-")
+    }
+  }
+}));
+var Project = defineDocumentType(() => ({
+  name: "Project",
+  filePathPattern: "project/*.md",
+  fields: {
+    name: { type: "string", required: true },
+    date: { type: "string", required: true },
+    cover: { type: "string", required: true },
+    logo: { type: "string", required: true },
+    published: { type: "boolean", required: true },
+    stack: { type: "list", of: { type: "string" } },
+    projectLink: { type: "string" },
+    githubLink: { type: "string" },
+    description: { type: "string" }
+  },
+  computedFields: {
+    id: {
+      type: "string",
+      // eslint-disable-next-line no-underscore-dangle
+      resolve: (post) => post._raw.sourceFileName.replace(/\.md$|\.mdx$/, "")
+    },
+    slug: {
+      type: "string",
+      resolve: (post) => post.name.toLowerCase().replace(/ /g, "-")
     }
   }
 }));
 var contentLayerConfig = makeSource({
   contentDirPath: "content",
-  documentTypes: [Post],
+  documentTypes: [Post, Project],
   markdown: {
     remarkPlugins: [remarkHtml],
     rehypePlugins: [rehypeRaw]
@@ -55,4 +82,4 @@ var contentlayer_config_default = contentLayerConfig;
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-CR22XARN.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-35F2Y743.mjs.map

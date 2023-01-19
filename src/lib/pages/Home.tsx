@@ -18,6 +18,8 @@ import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { allPosts } from "contentlayer/generated";
+import moment from "moment";
 
 const MotionImg = motion(Img);
 const MotionLink = motion(Link);
@@ -45,12 +47,14 @@ const ProjectCard = (props: any) => {
   );
 };
 
-const RecentPostCard = () => {
+const RecentPostCard = (props: any) => {
   return (
-    <MotionLink href="/post/1" style={{ width: "100%" }}>
+    <MotionLink href={`/post/${props.slug}`} style={{ width: "100%" }}>
       <VStack alignItems="flex-start" color="initial">
-        <Heading size="lg">Judul Post</Heading>
-        <Text>January 19, 2023 - 3 mins read</Text>
+        <Heading size="lg">{props.title}</Heading>
+        <Text>
+          {moment(props.date).format("MMM DD, YYYY")} - {props.readTime.text}
+        </Text>
       </VStack>
     </MotionLink>
   );
@@ -110,9 +114,9 @@ const Home = () => {
       <Box mt="3rem">
         <Heading>Recent Posts</Heading>
         <VStack my="1rem" py="1rem" spacing="2rem">
-          <RecentPostCard />
-          <RecentPostCard />
-          <RecentPostCard />
+          {allPosts.map((post) => (
+            <RecentPostCard key={post.id} {...post} />
+          ))}
         </VStack>
         <ReadMoreBtn href="/post">view all posts</ReadMoreBtn>
       </Box>

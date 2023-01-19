@@ -16,46 +16,27 @@ import {
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { IoHome, IoRocket, IoPerson, IoDocument, IoMoon, IoSunny } from "react-icons/io5";
-import { IconType } from "react-icons/lib";
-
-const NavLink = (props: { children?: React.ReactNode; path?: string; icon?: IconType; label: string }) => {
-  return (
-    <Tooltip label={props.label}>
-      <Button
-        as={Link}
-        href={props.path ? props.path : "/"}
-        borderRadius="15px"
-        variant="ghost"
-        border={"2px solid transparent"}
-        _hover={{ border: useColorModeValue("2px solid #3182ce", "2px solid #63b3ed") }}
-        transition="all 0.2s ease-in-out"
-        p={0}
-      >
-        {props.icon && <Icon as={props.icon} />}
-      </Button>
-    </Tooltip>
-  );
-};
+import { NavLink } from "./shared";
 
 const navigationItem = [
   {
     label: "home",
-    path: "/",
+    href: "/",
     icon: IoHome,
   },
   {
     label: "project",
-    path: "/project",
+    href: "/project",
     icon: IoRocket,
   },
   {
     label: "post",
-    path: "/post",
+    href: "/post",
     icon: IoDocument,
   },
   {
     label: "profile",
-    path: "/about",
+    href: "/about",
     icon: IoPerson,
   },
 ];
@@ -93,7 +74,7 @@ const Navbar = () => {
             <Show above="md">
               <HStack>
                 {navigationItem.map((item) => (
-                  <NavLink key={item.path} {...item} />
+                  <NavLink key={item.href} {...item} />
                 ))}
               </HStack>
             </Show>
@@ -140,7 +121,7 @@ const Navbar = () => {
               backdropFilter="blur(30px);"
             >
               {navigationItem.map((item: any) => (
-                <NavLink key={item.path} {...item} />
+                <NavLink key={item.href} {...item} />
               ))}
             </Flex>
           </Container>

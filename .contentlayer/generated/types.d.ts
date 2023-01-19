@@ -16,17 +16,35 @@ export type Post = {
   title: string
   date: string
   cover: string
-  thumbnail?: string | undefined
   description?: string | undefined
-  legacyID?: string | undefined
   published: boolean
   tags?: string[] | undefined
   readTime?: ReadTime | undefined
-  cover_image?: string | undefined
   /** Markdown file body */
   body: Markdown
   readTime: nested
   id: string
+  slug: string
+}
+
+export type Project = {
+  /** File path relative to `contentDirPath` */
+  _id: string
+  _raw: Local.RawDocumentData
+  type: 'Project'
+  name: string
+  date: string
+  cover: string
+  logo: string
+  published: boolean
+  stack?: string[] | undefined
+  projectLink?: string | undefined
+  githubLink?: string | undefined
+  description?: string | undefined
+  /** Markdown file body */
+  body: Markdown
+  id: string
+  slug: string
 }  
 
 /** Nested types */
@@ -47,8 +65,8 @@ export type ReadTime = {
 export type AllTypes = DocumentTypes | NestedTypes
 export type AllTypeNames = DocumentTypeNames | NestedTypeNames
 
-export type DocumentTypes = Post
-export type DocumentTypeNames = 'Post'
+export type DocumentTypes = Post | Project
+export type DocumentTypeNames = 'Post' | 'Project'
 
 export type NestedTypes = ReadTime
 export type NestedTypeNames = 'ReadTime'
@@ -70,6 +88,7 @@ declare global {
 
 export type DocumentTypeMap = {
   Post: Post
+  Project: Project
 }
 
 export type NestedTypeMap = {

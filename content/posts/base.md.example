@@ -1,0 +1,14 @@
+---
+title: Place your title here
+date: "YYYY-MM-DD"
+cover: /images/posts/your-img.ext
+published: true | false 
+tags:
+  - tag 1
+  - tag 2
+  - tag 3
+---
+
+## Section 1
+
+## Section 2
