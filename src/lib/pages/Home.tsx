@@ -7,7 +7,7 @@ import {
   Text,
   VStack,
   Img,
-  Link,
+  Link as ChakraLink,
   Grid,
   GridItem,
   AspectRatio,
@@ -17,33 +17,51 @@ import {
 import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { allPosts, allProjects } from "contentlayer/generated";
+import moment from "moment";
 
 const MotionImg = motion(Img);
+const MotionLink = motion(Link);
 
 const ProjectCard = (props: any) => {
   return (
-    <GridItem as={Link} href="/" pos="relative">
+    <GridItem as={ChakraLink} href={`/project/${props.slug}`} pos="relative">
       <AspectRatio ratio={16 / 10} w="100%" bgColor="white" borderRadius="15px" overflow="hidden">
         <MotionImg
-          style={{ _hover: { cursor: "pointer " } }}
+          _hover={{ cursor: "pointer" }}
           initial={{
             filter: "blur(5px) brightness(60%)",
             scale: 1.05,
           }}
           whileHover={{ filter: "blur(0px) brightness(80%)", scale: 1.08 }}
           transition={{ type: "spring", stiffness: 300, damping: 50 }}
-          src="https://raw.githubusercontent.com/adrianfinantyo/portofolio-post/main/maxima-2021/images/landing-page.jpg"
+          src={props.cover}
         />
       </AspectRatio>
       <HStack pos="absolute" bottom="2rem" left="2rem" zIndex={10} alignItems="center">
-        <Avatar src={props.projectLogo} />
-        <Text>MAXIMA 2021</Text>
+        <Avatar src={props.logo} />
+        <Text>{props.name}</Text>
       </HStack>
     </GridItem>
   );
 };
 
+const RecentPostCard = (props: any) => {
+  return (
+    <MotionLink href={`/post/${props.slug}`} style={{ width: "100%" }}>
+      <VStack alignItems="flex-start" color="initial">
+        <Heading size="lg">{props.title}</Heading>
+        <Text>
+          {moment(props.date).format("MMM DD, YYYY")} - {props.readTime.text}
+        </Text>
+      </VStack>
+    </MotionLink>
+  );
+};
+
 const Home = () => {
+  console.log(allProjects);
   return (
     <PageLayout>
       {/* Profile Introduction */}
@@ -59,6 +77,7 @@ const Home = () => {
           flexDir="column"
           alignItems={{ base: "center", lg: "flex-start" }}
           spacing={{ base: "1rem", md: "2rem" }}
+          textAlign={{ base: "center", lg: "left" }}
         >
           <Alert
             status="info"
@@ -67,14 +86,14 @@ const Home = () => {
             fontSize={{ base: "xs", md: "md", xl: "lg" }}
           >
             <AlertIcon />
-            Hi! I&aposm a frontend engineer based in Indonesia.
+            Hi! I&apos;m a frontend engineer based in Indonesia.
           </Alert>
-          <Heading fontSize="4xl">Adrian Finantyo</Heading>
+          <Heading fontSize={{ base: "2xl", md: "3xl", xl: "5xl" }}>Adrian Finantyo</Heading>
           <Text fontSize={{ base: "sm", md: "lg", xl: "xl" }}>
             Undergraduate Informatics Student at{" "}
-            <Link href="https://umn.ac.id/" target="_blank">
+            <ChakraLink href="https://umn.ac.id/" target="_blank">
               Universitas Multimedia Nusantara, Tangerang
-            </Link>
+            </ChakraLink>
           </Text>
         </VStack>
         <Box w={{ base: "280px", md: "300px", xl: "500px" }}>
@@ -84,19 +103,20 @@ const Home = () => {
       {/* // Projects */}
       <Box mt="3rem">
         <Heading>Projects</Heading>
-        <Grid py="1rem" mt="1rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+        <Grid py="1rem" my="1rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">
+          {allProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
         </Grid>
         <ReadMoreBtn href="/projects">view all projects</ReadMoreBtn>
       </Box>
       {/* Post */}
       <Box mt="3rem">
         <Heading>Recent Posts</Heading>
-        <VStack mt="1rem">
-          <Link href="/">adawd</Link>
+        <VStack my="1rem" py="1rem" spacing="2rem">
+          {allPosts.map((post) => (
+            <RecentPostCard key={post.id} {...post} />
+          ))}
         </VStack>
         <ReadMoreBtn href="/post">view all posts</ReadMoreBtn>
       </Box>

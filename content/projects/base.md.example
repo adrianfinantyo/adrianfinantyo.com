@@ -1,0 +1,14 @@
+---
+name: Place your title here
+date: "YYYY-MM-DD"
+cover: /images/posts/your-img.ext
+logo: /images/posts/your-img.ext
+published: true | false 
+stacks:
+  - stack 1
+  - stack 2
+  - stack 3
+projectLink: https://your-link-here.com
+githubLink: https://github.com
+description: Place your description here
+---

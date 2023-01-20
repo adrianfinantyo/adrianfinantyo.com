@@ -6,7 +6,7 @@ on:
       branches:
         - Production
 
-name: 🔥 Adrian's Website CI/CD
+name: 🔗 Adrian's Website CI/CD
 jobs:
   web-deploy:
     name: 🚀 Deploy to adrianfinantyo.com
@@ -14,7 +14,6 @@ jobs:
     environment: production
     env:
       CI: false
-    if: github.ref == 'refs/heads/Production'
     steps:
       - name: 🚚 Get latest code
         uses: actions/checkout@v2
