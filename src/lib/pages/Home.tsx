@@ -20,6 +20,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { allPosts, allProjects } from "contentlayer/generated";
 import moment from "moment";
+import { transition } from "../constants/anim";
 
 const MotionImg = motion(Img);
 const MotionLink = motion(Link);
@@ -35,7 +36,7 @@ const ProjectCard = (props: any) => {
             scale: 1.05,
           }}
           whileHover={{ filter: "blur(0px) brightness(80%)", scale: 1.08 }}
-          transition={{ type: "spring", stiffness: 300, damping: 50 }}
+          transition={transition.defaultSpring}
           src={props.cover}
         />
       </AspectRatio>
@@ -49,7 +50,14 @@ const ProjectCard = (props: any) => {
 
 const RecentPostCard = (props: any) => {
   return (
-    <MotionLink href={`/post/${props.slug}`} style={{ width: "100%" }}>
+    <MotionLink
+      whileHover={{
+        x: 10,
+      }}
+      transition={transition.defaultSpring}
+      href={`/post/${props.slug}`}
+      style={{ width: "100%" }}
+    >
       <VStack alignItems="flex-start" color="initial">
         <Heading size="lg">{props.title}</Heading>
         <Text>
