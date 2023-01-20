@@ -1,4 +1,4 @@
-import { Button, Icon, Tooltip, useColorModeValue } from "@chakra-ui/react";
+import { Button, Icon, Tooltip, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 import { ImArrowRight2 } from "react-icons/im";
 import { IconType } from "react-icons/lib/esm/iconBase";
@@ -30,6 +30,7 @@ export const NavLink = (props: {
   variant?: "clear" | "solid";
   action?: () => void;
 }) => {
+  const { colorMode } = useColorMode();
   return (
     <Tooltip label={props.label}>
       <Button
@@ -39,10 +40,10 @@ export const NavLink = (props: {
         borderRadius="15px"
         variant="ghost"
         border={"2px solid transparent"}
-        _hover={{ border: useColorModeValue("2px solid #3182ce", "2px solid #63b3ed") }}
+        _hover={{ border: colorMode == "light" ? "2px solid #3182ce" : "2px solid #63b3ed" }}
         transition="all 0.2s ease-in-out"
         p={0}
-        bgColor={props.variant === "solid" ? useColorModeValue("blackAlpha.200", "whiteAlpha.200") : ""}
+        bgColor={props.variant === "solid" ? (colorMode == "light" ? "blackAlpha.200" : "whiteAlpha.200") : ""}
       >
         {props.icon && <Icon as={props.icon} />}
       </Button>

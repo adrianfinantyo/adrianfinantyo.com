@@ -68,11 +68,9 @@ const PostDetails = () => {
           </VStack>
         </HStack>
       </Flex>
-      <ReactMarkdown
-        components={ChakraUIRenderer(newTheme)}
-        children={postData?.body?.html as string}
-        rehypePlugins={[rehypeRaw]}
-      />
+      <ReactMarkdown components={ChakraUIRenderer(newTheme)} rehypePlugins={[rehypeRaw]}>
+        {postData?.body?.html as string}
+      </ReactMarkdown>
     </PageLayout>
   );
 };
