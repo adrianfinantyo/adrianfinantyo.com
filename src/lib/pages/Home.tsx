@@ -18,7 +18,7 @@ import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { allPosts } from "contentlayer/generated";
+import { allPosts, allProjects } from "contentlayer/generated";
 import moment from "moment";
 
 const MotionImg = motion(Img);
@@ -26,22 +26,22 @@ const MotionLink = motion(Link);
 
 const ProjectCard = (props: any) => {
   return (
-    <GridItem as={ChakraLink} href="/" pos="relative">
+    <GridItem as={ChakraLink} href={`/project/${props.slug}`} pos="relative">
       <AspectRatio ratio={16 / 10} w="100%" bgColor="white" borderRadius="15px" overflow="hidden">
         <MotionImg
-          style={{ _hover: { cursor: "pointer " } }}
+          _hover={{ cursor: "pointer" }}
           initial={{
             filter: "blur(5px) brightness(60%)",
             scale: 1.05,
           }}
           whileHover={{ filter: "blur(0px) brightness(80%)", scale: 1.08 }}
           transition={{ type: "spring", stiffness: 300, damping: 50 }}
-          src="https://raw.githubusercontent.com/adrianfinantyo/portofolio-post/main/maxima-2021/images/landing-page.jpg"
+          src={props.cover}
         />
       </AspectRatio>
       <HStack pos="absolute" bottom="2rem" left="2rem" zIndex={10} alignItems="center">
-        <Avatar src={props.projectLogo} />
-        <Text>MAXIMA 2021</Text>
+        <Avatar src={props.logo} />
+        <Text>{props.name}</Text>
       </HStack>
     </GridItem>
   );
@@ -61,6 +61,7 @@ const RecentPostCard = (props: any) => {
 };
 
 const Home = () => {
+  console.log(allProjects);
   return (
     <PageLayout>
       {/* Profile Introduction */}
@@ -103,10 +104,9 @@ const Home = () => {
       <Box mt="3rem">
         <Heading>Projects</Heading>
         <Grid py="1rem" my="1rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+          {allProjects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
         </Grid>
         <ReadMoreBtn href="/projects">view all projects</ReadMoreBtn>
       </Box>

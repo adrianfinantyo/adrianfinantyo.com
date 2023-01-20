@@ -1,1 +1,93 @@
-[]
+[
+  {
+    "name": "FOKUS ULTIMAGZ 2022: Napza",
+    "date": "2022-09-18",
+    "cover": "/images/projects/fokus2022/cover.png",
+    "logo": "/images/projects/fokus2022/logo.jpg",
+    "published": true,
+    "stack": [
+      "React JS",
+      "Firebase",
+      "Chakra UI",
+      "Netlify"
+    ],
+    "projectLink": "https://fokus.ultimagz.com/articles/napza",
+    "githubLink": "https://github.com/IT-ULTIMAGZ/fokus-2022-react",
+    "description": "Fokus is an interactive magazine that is published by Ultimagz. This magazine is published every year and it is used to provide information about one topic. In 2022, Fokus raised a theme of NAPZA. Also in 2022, we move forward from developing with vanilla to React JS and Chakra UI.",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "projects/fokus-2022.md",
+    "_raw": {
+      "sourceFilePath": "projects/fokus-2022.md",
+      "sourceFileName": "fokus-2022.md",
+      "sourceFileDir": "projects",
+      "contentType": "markdown",
+      "flattenedPath": "projects/fokus-2022"
+    },
+    "type": "Project",
+    "id": "fokus-2022",
+    "slug": "fokus-ultimagz-2022:-napza"
+  },
+  {
+    "name": "News Portal Website",
+    "date": "2021-12-16",
+    "cover": "/images/projects/ufest2021/cover.png",
+    "logo": "/images/projects/ufest2021/logo.png",
+    "published": true,
+    "stack": [
+      "React JS",
+      "Firebase",
+      "Chakra UI",
+      "Netlify"
+    ],
+    "githubLink": "https://github.com/lifosmin/UASLabPTI",
+    "description": "News Portal Website is a website that is used to provide a news. This website was created for Introduction to Internet Technology course at Universitas Multimedia Nusantara.",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "projects/react-news-portal.md",
+    "_raw": {
+      "sourceFilePath": "projects/react-news-portal.md",
+      "sourceFileName": "react-news-portal.md",
+      "sourceFileDir": "projects",
+      "contentType": "markdown",
+      "flattenedPath": "projects/react-news-portal"
+    },
+    "type": "Project",
+    "id": "react-news-portal",
+    "slug": "news-portal-website"
+  },
+  {
+    "name": "UMN Festival 2021's Website",
+    "date": "2021-01-30",
+    "cover": "/images/projects/ufest2021/cover.png",
+    "logo": "/images/projects/ufest2021/logo.png",
+    "published": true,
+    "stack": [
+      "React JS",
+      "Express",
+      "MySQL",
+      "DigitalOcean"
+    ],
+    "projectLink": "https://ufest.umn.ac.id",
+    "description": "UMN FEstival 2021's Website is a website that is used to provide information and handle the registation proccess about UMN Festival 2021 event. This website is built using MERN stack.",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "projects/ufest-2021.md",
+    "_raw": {
+      "sourceFilePath": "projects/ufest-2021.md",
+      "sourceFileName": "ufest-2021.md",
+      "sourceFileDir": "projects",
+      "contentType": "markdown",
+      "flattenedPath": "projects/ufest-2021"
+    },
+    "type": "Project",
+    "id": "ufest-2021",
+    "slug": "umn-festival-2021's-website"
+  }
+]

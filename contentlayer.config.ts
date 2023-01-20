@@ -48,7 +48,7 @@ const Post = defineDocumentType(() => ({
 
 const Project = defineDocumentType(() => ({
   name: "Project",
-  filePathPattern: "project/*.md",
+  filePathPattern: "projects/*.md",
   fields: {
     name: { type: "string", required: true },
     date: { type: "string", required: true },

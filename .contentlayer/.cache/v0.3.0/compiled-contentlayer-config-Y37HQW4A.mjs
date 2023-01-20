@@ -46,7 +46,7 @@ var Post = defineDocumentType(() => ({
 }));
 var Project = defineDocumentType(() => ({
   name: "Project",
-  filePathPattern: "project/*.md",
+  filePathPattern: "projects/*.md",
   fields: {
     name: { type: "string", required: true },
     date: { type: "string", required: true },
@@ -82,4 +82,4 @@ var contentlayer_config_default = contentLayerConfig;
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-35F2Y743.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-Y37HQW4A.mjs.map
