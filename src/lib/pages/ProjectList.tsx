@@ -87,7 +87,9 @@ const ProjectList = () => {
               size="lg"
               transition="0.5s ease-in-out"
             />
-            <InputRightElement children={<Icon as={IoSearch} />} />
+            <InputRightElement>
+              <Icon as={IoSearch} />
+            </InputRightElement>
           </InputGroup>
         </Box>
         <Grid mt="5rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">

@@ -9,7 +9,9 @@ const Footer = (props: any) => {
       <VStack alignItems="flex-start">
         <HStack my="2rem" textTransform="capitalize" spacing="1rem">
           {navigationItem.map((item) => (
-            <Link href={item.href}>{item.label}</Link>
+            <Link href={item.href} key={item.label}>
+              {item.label}
+            </Link>
           ))}
         </HStack>
         <Text>
