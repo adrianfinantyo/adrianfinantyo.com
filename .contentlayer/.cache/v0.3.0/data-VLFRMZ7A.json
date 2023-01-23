@@ -1,0 +1,146 @@
+{
+  "cacheItemsMap": {
+    "posts/maxima-2021.md": {
+      "document": {
+        "title": "First Experience as A Frontend Engineer at MAXIMA 2021",
+        "date": "2021-05-13",
+        "cover": "/images/posts/maxima2021/landing-page.jpg",
+        "published": true,
+        "tags": [
+          "React JS",
+          "MERN Stack",
+          "Frontend Engineer"
+        ],
+        "readTime": {
+          "text": "2 min read",
+          "minutes": 1.55,
+          "time": 93000,
+          "words": 310
+        },
+        "body": {
+          "raw": "\r\nAround May 2020 I had the opportunity to become a frontend engineer at the Maxima 2021 activity. Maxima is the second largest student activity at Multimedia Nusantara University, Tangerang. This activity is intended for first year students to explore various activities and extracurricular activities on campus. To be part of the website development team at Maxima 2021 requires several requirements which in my opinion were quite difficult at the time, but I am happy to have passed the selection and can join the frontend subdivision.\r\n\r\n## Introduction\r\n\r\nFor about 11 months since May 2020, I worked on the website together with a team of 6 members and 2 supervisors. The website that was built has several features that can be used by users to provide content and connect users with the event committee through a series of activities.\r\n![Pictures of Landing Page Maxima 2021](/images/posts/maxima2021/fotobersama-1.png)\r\n\r\n## Tech Stack\r\n\r\nThis website is built using modern web development methods, which is to separate the frontend from the backend into different stacks. On the frontend the stack used is ReactJS + Typescript, Chakra UI, Styled Components, framer motion, Material UI, and several other libraries. While on the backend the stack used is Node.js, Express.js, MySQL, and MongoDB.\r\n\r\n## Benefits\r\n\r\nDuring this development period, I gained a lot of knowledge. Starting from building an attractive appearance, developing a website with clean code, to collaborating with other team members. Apart from website development, I have also gained experience working with the scrum methodology. With this work method, the supervisor will provide several backlogs in a kanban template and then each team member is free to take their own portion of work according to the existing deadline.\r\n\r\n## Result\r\n\r\n![Pictures of Login Page Maxima 2021](/images/posts/maxima2021/login-page.jpg)\r\n![Pictures of State Maxima 2021](/images/posts/maxima2021/state.png)\r\n![Pictures of HoME Maxima 2021](/images/posts/maxima2021/home.png)\r\n![Pictures of Dashboard Panitia Maxima 2021](/images/posts/maxima2021/dashboard.png)\r\n![Pictures of Dashboard Details Maxima 2021](/images/posts/maxima2021/dashboard-detail.png)\r\n",
+          "html": "<p>Around May 2020 I had the opportunity to become a frontend engineer at the Maxima 2021 activity. Maxima is the second largest student activity at Multimedia Nusantara University, Tangerang. This activity is intended for first year students to explore various activities and extracurricular activities on campus. To be part of the website development team at Maxima 2021 requires several requirements which in my opinion were quite difficult at the time, but I am happy to have passed the selection and can join the frontend subdivision.</p>\n<h2>Introduction</h2>\n<p>For about 11 months since May 2020, I worked on the website together with a team of 6 members and 2 supervisors. The website that was built has several features that can be used by users to provide content and connect users with the event committee through a series of activities.\r\n<img src=\"/images/posts/maxima2021/fotobersama-1.png\" alt=\"Pictures of Landing Page Maxima 2021\"></p>\n<h2>Tech Stack</h2>\n<p>This website is built using modern web development methods, which is to separate the frontend from the backend into different stacks. On the frontend the stack used is ReactJS + Typescript, Chakra UI, Styled Components, framer motion, Material UI, and several other libraries. While on the backend the stack used is Node.js, Express.js, MySQL, and MongoDB.</p>\n<h2>Benefits</h2>\n<p>During this development period, I gained a lot of knowledge. Starting from building an attractive appearance, developing a website with clean code, to collaborating with other team members. Apart from website development, I have also gained experience working with the scrum methodology. With this work method, the supervisor will provide several backlogs in a kanban template and then each team member is free to take their own portion of work according to the existing deadline.</p>\n<h2>Result</h2>\n<p><img src=\"/images/posts/maxima2021/login-page.jpg\" alt=\"Pictures of Login Page Maxima 2021\">\r\n<img src=\"/images/posts/maxima2021/state.png\" alt=\"Pictures of State Maxima 2021\">\r\n<img src=\"/images/posts/maxima2021/home.png\" alt=\"Pictures of HoME Maxima 2021\">\r\n<img src=\"/images/posts/maxima2021/dashboard.png\" alt=\"Pictures of Dashboard Panitia Maxima 2021\">\r\n<img src=\"/images/posts/maxima2021/dashboard-detail.png\" alt=\"Pictures of Dashboard Details Maxima 2021\"></p>"
+        },
+        "_id": "posts/maxima-2021.md",
+        "_raw": {
+          "sourceFilePath": "posts/maxima-2021.md",
+          "sourceFileName": "maxima-2021.md",
+          "sourceFileDir": "posts",
+          "contentType": "markdown",
+          "flattenedPath": "posts/maxima-2021"
+        },
+        "type": "Post",
+        "id": "maxima-2021",
+        "slug": "first-experience-as-a-frontend-engineer-at-maxima-2021"
+      },
+      "documentHash": "1674226156146",
+      "hasWarnings": false,
+      "documentTypeName": "Post"
+    },
+    "projects/fokus-2022.md": {
+      "document": {
+        "title": "Make interactive magazine with React JS and Chakra UI",
+        "name": "FOKUS ULTIMAGZ 2022: Napza",
+        "date": "2022-09-18",
+        "cover": "/images/projects/fokus2022/cover.png",
+        "logo": "/images/projects/fokus2022/logo.jpg",
+        "published": true,
+        "stack": [
+          "React JS",
+          "Firebase",
+          "Chakra UI",
+          "Netlify"
+        ],
+        "description": "Fokus is an interactive magazine that is published by Ultimagz. This magazine is published every year and it is used to provide information about one topic. In 2022, Fokus raised a theme of NAPZA. Also in 2022, we move forward from developing with vanilla to React JS and Chakra UI.",
+        "body": {
+          "raw": "",
+          "html": ""
+        },
+        "_id": "projects/fokus-2022.md",
+        "_raw": {
+          "sourceFilePath": "projects/fokus-2022.md",
+          "sourceFileName": "fokus-2022.md",
+          "sourceFileDir": "projects",
+          "contentType": "markdown",
+          "flattenedPath": "projects/fokus-2022"
+        },
+        "type": "Project",
+        "id": "fokus-2022",
+        "slug": "fokus-ultimagz-2022:-napza"
+      },
+      "documentHash": "1674456623093",
+      "hasWarnings": true,
+      "documentTypeName": "Project"
+    },
+    "projects/react-news-portal.md": {
+      "document": {
+        "title": "College assignment to create a news portal website using React JS",
+        "name": "News Portal Website",
+        "date": "2021-12-16",
+        "cover": "/images/projects/ufest2021/cover.png",
+        "logo": "/images/projects/ufest2021/logo.png",
+        "published": true,
+        "stack": [
+          "React JS",
+          "Firebase",
+          "Chakra UI",
+          "Netlify"
+        ],
+        "description": "News Portal Website is a website that is used to provide a news. This website was created for Introduction to Internet Technology course at Universitas Multimedia Nusantara.",
+        "body": {
+          "raw": "",
+          "html": ""
+        },
+        "_id": "projects/react-news-portal.md",
+        "_raw": {
+          "sourceFilePath": "projects/react-news-portal.md",
+          "sourceFileName": "react-news-portal.md",
+          "sourceFileDir": "projects",
+          "contentType": "markdown",
+          "flattenedPath": "projects/react-news-portal"
+        },
+        "type": "Project",
+        "id": "react-news-portal",
+        "slug": "news-portal-website"
+      },
+      "documentHash": "1674456618197",
+      "hasWarnings": true,
+      "documentTypeName": "Project"
+    },
+    "projects/ufest-2021.md": {
+      "document": {
+        "title": "The main website for organizing the 2022 UMN Festival event",
+        "name": "UMN Festival 2021's Website",
+        "date": "2021-01-30",
+        "cover": "/images/projects/ufest2021/cover.png",
+        "logo": "/images/projects/ufest2021/logo.png",
+        "published": true,
+        "stack": [
+          "React JS",
+          "Express",
+          "MySQL",
+          "DigitalOcean"
+        ],
+        "description": "UMN Festival 2021's Website is a website that is used to provide information and handle the registation proccess about UMN Festival 2021 event. This website is built using MERN stack.",
+        "body": {
+          "raw": "",
+          "html": ""
+        },
+        "_id": "projects/ufest-2021.md",
+        "_raw": {
+          "sourceFilePath": "projects/ufest-2021.md",
+          "sourceFileName": "ufest-2021.md",
+          "sourceFileDir": "projects",
+          "contentType": "markdown",
+          "flattenedPath": "projects/ufest-2021"
+        },
+        "type": "Project",
+        "id": "ufest-2021",
+        "slug": "umn-festival-2021's-website"
+      },
+      "documentHash": "1674454671827",
+      "hasWarnings": true,
+      "documentTypeName": "Project"
+    }
+  }
+}

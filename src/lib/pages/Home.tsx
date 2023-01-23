@@ -13,6 +13,7 @@ import {
   AspectRatio,
   Avatar,
   HStack,
+  Icon,
 } from "@chakra-ui/react";
 import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
@@ -21,14 +22,15 @@ import Link from "next/link";
 import { allPosts, allProjects } from "contentlayer/generated";
 import moment from "moment";
 import { transition } from "../constants/anim";
+import { IoCodeSlash } from "react-icons/io5";
 
 const MotionImg = motion(Img);
 const MotionLink = motion(Link);
 
 const ProjectCard = (props: any) => {
   return (
-    <GridItem as={ChakraLink} href={`/project/${props.slug}`} pos="relative">
-      <AspectRatio ratio={16 / 10} w="100%" bgColor="white" borderRadius="15px" overflow="hidden">
+    <GridItem as={Link} href={`/project/${props.slug}`} pos="relative" borderRadius="15px" overflow="hidden">
+      <AspectRatio ratio={16 / 10} w="100%" bgColor="white">
         <MotionImg
           _hover={{ cursor: "pointer" }}
           initial={{
@@ -40,7 +42,7 @@ const ProjectCard = (props: any) => {
           src={props.cover}
         />
       </AspectRatio>
-      <HStack pos="absolute" bottom="2rem" left="2rem" zIndex={10} alignItems="center">
+      <HStack pos="absolute" bottom="2rem" left="2rem" zIndex={10} alignItems="center" color="white">
         <Avatar src={props.logo} />
         <Text>{props.name}</Text>
       </HStack>
@@ -88,13 +90,11 @@ const Home = () => {
           textAlign={{ base: "center", lg: "left" }}
         >
           <Alert
-            status="info"
             w={{ base: "100%", sm: "max-content" }}
             borderRadius="10px"
             fontSize={{ base: "xs", md: "md", xl: "lg" }}
           >
-            <AlertIcon />
-            Hi! I&apos;m a frontend engineer based in Indonesia.
+            👋 Hi! I&apos;m a Software Engineer based in Indonesia.
           </Alert>
           <Heading fontSize={{ base: "2xl", md: "3xl", xl: "5xl" }}>Adrian Finantyo</Heading>
           <Text fontSize={{ base: "sm", md: "lg", xl: "xl" }}>
@@ -116,7 +116,7 @@ const Home = () => {
             <ProjectCard key={project.id} {...project} />
           ))}
         </Grid>
-        <ReadMoreBtn href="/projects">view all projects</ReadMoreBtn>
+        <ReadMoreBtn href="/project">view all projects</ReadMoreBtn>
       </Box>
       {/* Post */}
       <Box mt="3rem">

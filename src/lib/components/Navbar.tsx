@@ -4,7 +4,6 @@ import {
   Container,
   Flex,
   Heading,
-  Hide,
   HStack,
   Icon,
   Show,
@@ -15,31 +14,9 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { IoHome, IoRocket, IoPerson, IoDocument, IoMoon, IoSunny } from "react-icons/io5";
+import { IoMoon, IoSunny } from "react-icons/io5";
+import { navigationItem } from "../constants/link";
 import { NavLink } from "./shared";
-
-const navigationItem = [
-  {
-    label: "home",
-    href: "/",
-    icon: IoHome,
-  },
-  {
-    label: "project",
-    href: "/project",
-    icon: IoRocket,
-  },
-  {
-    label: "post",
-    href: "/post",
-    icon: IoDocument,
-  },
-  {
-    label: "profile",
-    href: "/about",
-    icon: IoPerson,
-  },
-];
 
 const colorModeVariants = {
   in: {
@@ -117,8 +94,8 @@ const Navbar = () => {
               alignItems="center"
               py="1rem"
               borderRadius="15px"
-              bgColor="blackAlpha.500"
-              backdropFilter="blur(30px);"
+              bgColor={useColorModeValue("rgba(237, 242, 247, 0.4)", "RGBA(0, 0, 0, 0.4)")}
+              backdropFilter="saturate(180%) blur(6px);"
             >
               {navigationItem.map((item: any) => (
                 <NavLink key={item.href} {...item} />

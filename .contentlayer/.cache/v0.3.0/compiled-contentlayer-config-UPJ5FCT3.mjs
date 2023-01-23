@@ -48,12 +48,13 @@ var Project = defineDocumentType(() => ({
   name: "Project",
   filePathPattern: "projects/*.md",
   fields: {
+    title: { type: "string", required: true },
     name: { type: "string", required: true },
     date: { type: "string", required: true },
     cover: { type: "string", required: true },
     logo: { type: "string", required: true },
     published: { type: "boolean", required: true },
-    stack: { type: "list", of: { type: "string" } },
+    stack: { type: "list", of: { type: "string" }, required: true },
     projectLink: { type: "string" },
     githubLink: { type: "string" },
     description: { type: "string" }
@@ -82,4 +83,4 @@ var contentlayer_config_default = contentLayerConfig;
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-Y37HQW4A.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-UPJ5FCT3.mjs.map

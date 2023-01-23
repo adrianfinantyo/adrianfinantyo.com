@@ -32,12 +32,13 @@ export type Project = {
   _id: string
   _raw: Local.RawDocumentData
   type: 'Project'
+  title: string
   name: string
   date: string
   cover: string
   logo: string
   published: boolean
-  stack?: string[] | undefined
+  stack: string[]
   projectLink?: string | undefined
   githubLink?: string | undefined
   description?: string | undefined
