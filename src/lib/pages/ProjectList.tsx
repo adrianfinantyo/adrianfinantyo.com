@@ -49,7 +49,9 @@ const ProjectPreviewCard = (props: any) => {
             <Text>{props.title}</Text>
             <HStack>
               {props.stack.map((stck: any) => (
-                <Tag colorScheme="teal">{stck}</Tag>
+                <Tag colorScheme="teal" key={stck}>
+                  {stck}
+                </Tag>
               ))}
             </HStack>
           </VStack>
