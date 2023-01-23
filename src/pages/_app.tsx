@@ -4,7 +4,7 @@ import { Box, ChakraProvider, useColorModeValue, extendTheme, Container } from "
 import { mode } from "@chakra-ui/theme-tools";
 import Navbar from "@/lib/components/Navbar";
 import Footer from "@/lib/components/Footer";
-import { NextSeo } from "next-seo";
+import NextNProgress from "nextjs-progressbar";
 
 const config = {
   useSystemColorMode: true,
@@ -43,7 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Container maxW={{ base: "container.sm", "2xl": "container.lg" }}>
         <Navbar />
-        <Box pt="8rem">
+        <Box pt="8rem" css={{}}>
+          <NextNProgress color="#4299E1" />
           <Component {...pageProps} />
         </Box>
         <Footer pb={{ base: "10rem", md: "8rem" }} />

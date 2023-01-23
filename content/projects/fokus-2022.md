@@ -1,4 +1,5 @@
 ---
+title: Make interactive magazine with React JS and Chakra UI
 name: "FOKUS ULTIMAGZ 2022: Napza"
 date: "2022-09-18"
 cover: /images/projects/fokus2022/cover.png

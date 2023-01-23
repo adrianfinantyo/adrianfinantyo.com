@@ -1,4 +1,5 @@
 ---
+title: College assignment to create a news portal website using React JS
 name: News Portal Website
 date: "2021-12-16"
 cover: /images/projects/ufest2021/cover.png
