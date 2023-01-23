@@ -49,7 +49,9 @@ const ProjectPreviewCard = (props: any) => {
             <Text>{props.title}</Text>
             <HStack>
               {props.stack.map((stck: any) => (
-                <Tag colorScheme="teal">{stck}</Tag>
+                <Tag colorScheme="teal" key={stck}>
+                  {stck}
+                </Tag>
               ))}
             </HStack>
           </VStack>
@@ -87,7 +89,9 @@ const ProjectList = () => {
               size="lg"
               transition="0.5s ease-in-out"
             />
-            <InputRightElement children={<Icon as={IoSearch} />} />
+            <InputRightElement>
+              <Icon as={IoSearch} />
+            </InputRightElement>
           </InputGroup>
         </Box>
         <Grid mt="5rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">

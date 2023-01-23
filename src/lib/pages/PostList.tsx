@@ -78,12 +78,14 @@ const PostList = () => {
               transition="0.5s ease-in-out"
               onChange={handleSearch}
             />
-            <InputRightElement children={<Icon as={IoSearch} />} />
+            <InputRightElement>
+              <Icon as={IoSearch} />
+            </InputRightElement>
           </InputGroup>
         </Box>
         <Grid mt="5rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }}>
           {posts.map((post) => (
-            <PostPreviewCard {...post} />
+            <PostPreviewCard key={post.slug} {...post} />
           ))}
         </Grid>
       </Box>

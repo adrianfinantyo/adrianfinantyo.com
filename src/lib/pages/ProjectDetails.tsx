@@ -49,7 +49,7 @@ const ProjectDetails = () => {
         <HStack>
           <Text>Stack: </Text>
           {postData?.stack?.map((stck) => (
-            <Tag as={Link} colorScheme="teal" href={`/project?stack=${stck}`}>
+            <Tag as={Link} key={stck} colorScheme="teal" href={`/project?stack=${stck}`}>
               {stck}
             </Tag>
           ))}
