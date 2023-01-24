@@ -7,24 +7,40 @@ import {
   IoHome,
   IoPerson,
   IoRocket,
+  IoLogoYoutube,
+  IoCodeSlash,
 } from "react-icons/io5";
 
 export const social = [
   {
-    icon: IoMail,
-    url: "mailto:adrianfinantyo@gmail.com",
+    icon: IoLogoGithub,
+    label: "GitHub",
+    href: "https://github.com/adrianfinantyo",
   },
   {
     icon: IoLogoLinkedin,
-    url: "https://www.linkedin.com/in/adrianfinantyo/",
-  },
-  {
-    icon: IoLogoGithub,
-    url: "https://github.com/adrianfinantyo",
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/adrianfinantyo",
   },
   {
     icon: IoLogoInstagram,
-    url: "https://www.instagram.com/adrianfinantyo/",
+    label: "Instagram",
+    href: "https://www.instagram.com/adrianfinantyo",
+  },
+  {
+    icon: IoLogoYoutube,
+    label: "Youtube",
+    href: "https://youtube.com/c/adrianfinantyo",
+  },
+  {
+    icon: IoMail,
+    label: "e-mail",
+    href: "mailto:contact@adrianfinantyo.com",
+  },
+  {
+    icon: IoCodeSlash,
+    label: "resume",
+    href: encodeURI("/uploads/Bonifasius_Ariesto_Adrian_Finantyo's_Resume.pdf"),
   },
 ];
 

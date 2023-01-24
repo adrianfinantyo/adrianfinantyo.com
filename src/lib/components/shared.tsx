@@ -29,6 +29,8 @@ export const NavLink = (props: {
   label: string;
   variant?: "clear" | "solid";
   action?: () => void;
+  iconSize?: number;
+  isExternal?: boolean;
 }) => {
   const { colorMode } = useColorMode();
   return (
@@ -42,10 +44,12 @@ export const NavLink = (props: {
         border={"2px solid transparent"}
         _hover={{ border: colorMode == "light" ? "2px solid #3182ce" : "2px solid #63b3ed" }}
         transition="all 0.2s ease-in-out"
-        p={0}
+        padding={0}
+        boxSize={props.iconSize ? props.iconSize + 50 : 10}
         bgColor={props.variant === "solid" ? (colorMode == "light" ? "blackAlpha.200" : "whiteAlpha.200") : ""}
+        target={props.isExternal ? "_blank" : ""}
       >
-        {props.icon && <Icon as={props.icon} />}
+        {props.icon && <Icon boxSize={props.iconSize} as={props.icon} />}
       </Button>
     </Tooltip>
   );

@@ -19,7 +19,7 @@ import { allPosts } from "contentlayer/generated";
 import { motion } from "framer-motion";
 import moment from "moment";
 import Link from "next/link";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 
 const MotionBox = motion(Box);
@@ -54,7 +54,12 @@ const PostList = () => {
   const [posts, setPosts] = useState(allPosts);
 
   const handleSearch = (e: any) => {
-    setPosts(allPosts.filter((post) => post.title.toLowerCase().includes(e.target.value.toLowerCase())));
+    if (e.target.value === "") {
+      setPosts(allPosts);
+      return;
+    } else {
+      setPosts(allPosts.filter((post) => post.title.toLowerCase().includes(e.target.value.toLowerCase())));
+    }
   };
 
   return (
@@ -63,7 +68,7 @@ const PostList = () => {
         <Box>
           <Heading>Blogs</Heading>
           <Text mt="1rem">This space is dedicated to sharing my thoughts, ideas, and experience.</Text>
-          <InputGroup mt="2rem">
+          <InputGroup mt="2rem" size="lg">
             <Input
               bgColor={useColorModeValue("blackAlpha.200", "whiteAlpha.200")}
               variant="filled"
@@ -74,9 +79,8 @@ const PostList = () => {
                   "0 0 800px 80px rgba(255, 255, 255, 0.2)"
                 ),
               }}
-              size="lg"
               transition="0.5s ease-in-out"
-              onChange={handleSearch}
+              onChange={useMemo(() => handleSearch, [])}
             />
             <InputRightElement>
               <Icon as={IoSearch} />

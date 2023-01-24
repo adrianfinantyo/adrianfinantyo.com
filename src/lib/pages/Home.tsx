@@ -1,19 +1,17 @@
 import {
-  Alert,
-  AlertIcon,
   Box,
   Flex,
   Heading,
   Text,
   VStack,
   Img,
-  Link as ChakraLink,
   Grid,
   GridItem,
   AspectRatio,
   Avatar,
   HStack,
-  Icon,
+  Hide,
+  Skeleton,
 } from "@chakra-ui/react";
 import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
@@ -22,30 +20,79 @@ import Link from "next/link";
 import { allPosts, allProjects } from "contentlayer/generated";
 import moment from "moment";
 import { transition } from "../constants/anim";
-import { IoCodeSlash } from "react-icons/io5";
+import { useRef, useState } from "react";
 
 const MotionImg = motion(Img);
 const MotionLink = motion(Link);
 
+const animImgCard = {
+  initial: {
+    filter: "blur(0px) brightness(80%)",
+    scale: 1.1,
+  },
+  hover: {
+    filter: "blur(8px) brightness(60%)",
+    scale: 1.05,
+  },
+};
+
+const animTextCard = {
+  initial: {
+    opacity: 0,
+    y: "150%",
+  },
+  hover: {
+    opacity: 100,
+    y: 0,
+  },
+};
+
 const ProjectCard = (props: any) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
   return (
-    <GridItem as={Link} href={`/project/${props.slug}`} pos="relative" borderRadius="15px" overflow="hidden">
-      <AspectRatio ratio={16 / 10} w="100%" bgColor="white">
+    <GridItem
+      as={MotionLink}
+      whileHover="hover"
+      initial="initial"
+      href={`/project/${props.slug}`}
+      pos="relative"
+      overflow="hidden"
+    >
+      <AspectRatio ratio={16 / 10} w="100%" bgColor="white" borderRadius="15px" overflow="hidden">
         <MotionImg
           _hover={{ cursor: "pointer" }}
-          initial={{
-            filter: "blur(5px) brightness(60%)",
-            scale: 1.05,
-          }}
-          whileHover={{ filter: "blur(0px) brightness(80%)", scale: 1.08 }}
-          transition={transition.defaultSpring}
+          variants={animImgCard}
           src={props.cover}
+          transition={transition.defaultSpring}
+          onLoad={() => {
+            setIsLoaded(true);
+            console.log("loaded");
+          }}
         />
       </AspectRatio>
-      <HStack pos="absolute" bottom="2rem" left="2rem" zIndex={10} alignItems="center" color="white">
-        <Avatar src={props.logo} />
-        <Text>{props.name}</Text>
-      </HStack>
+      <motion.span
+        variants={animTextCard}
+        transition={transition.defaultSpring}
+        style={{ position: "absolute", bottom: "2rem", zIndex: 10, padding: "0 2rem" }}
+      >
+        <HStack alignItems="center" color="white" spacing="1rem">
+          <Avatar src={props.logo} />
+          <VStack alignItems="flex-start">
+            <Heading fontSize={{ md: "lg", xl: "2xl" }}>{props.name}</Heading>
+            <Text noOfLines={2}>{props.title}</Text>
+          </VStack>
+        </HStack>
+      </motion.span>
+
+      <Hide above="md">
+        <HStack alignItems="center" color="white" spacing="1rem" mt="1rem">
+          <VStack alignItems="flex-start">
+            <Heading fontSize={{ base: "xl", sm: "3xl" }}>{props.name}</Heading>
+            <Text>{props.title}</Text>
+          </VStack>
+        </HStack>
+      </Hide>
     </GridItem>
   );
 };
@@ -81,6 +128,7 @@ const Home = () => {
         alignItems="center"
         w="100%"
         minH="70vh"
+        gap="2rem"
       >
         <VStack
           mt={{ base: "2rem", lg: 0 }}
@@ -89,24 +137,16 @@ const Home = () => {
           spacing={{ base: "1rem", md: "2rem" }}
           textAlign={{ base: "center", lg: "left" }}
         >
-          <Alert
-            w={{ base: "100%", sm: "max-content" }}
-            borderRadius="10px"
-            fontSize={{ base: "xs", md: "md", xl: "lg" }}
-          >
+          <Heading fontSize={{ base: "2xl", md: "4xl", "2xl": "6xl" }}>Bonifasius Ariesto Adrian Finantyo</Heading>
+          <Text fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}>
             👋 Hi! I&apos;m a Software Engineer based in Indonesia.
-          </Alert>
-          <Heading fontSize={{ base: "2xl", md: "3xl", xl: "5xl" }}>Adrian Finantyo</Heading>
-          <Text fontSize={{ base: "sm", md: "lg", xl: "xl" }}>
-            Undergraduate Informatics Student at{" "}
-            <ChakraLink href="https://umn.ac.id/" target="_blank">
-              Universitas Multimedia Nusantara, Tangerang
-            </ChakraLink>
           </Text>
         </VStack>
-        <Box w={{ base: "280px", md: "300px", xl: "500px" }}>
-          <Img w="100%" height="auto" src="/images/adrianfinantyo-profilepict.png" borderRadius="50px" />
-        </Box>
+        <Img
+          w={{ base: "280px", md: "300px", lg: "250px", "2xl": "350px" }}
+          src="/images/adrianfinantyo-profilepict.png"
+          borderRadius="50px"
+        />
       </Flex>
       {/* // Projects */}
       <Box mt="3rem">
