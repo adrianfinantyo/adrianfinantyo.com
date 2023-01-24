@@ -18,11 +18,14 @@ import {
   Flex,
   HStack,
   Tag,
+  Wrap,
+  WrapItem,
 } from "@chakra-ui/react";
 import { allProjects } from "contentlayer/generated";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useMemo, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 
 const MotionBox = motion(Box);
@@ -47,13 +50,13 @@ const ProjectPreviewCard = (props: any) => {
           <VStack alignItems="flex-start" spacing="0.5rem">
             <Heading fontSize="2xl">{props.name}</Heading>
             <Text>{props.title}</Text>
-            <HStack>
+            <Wrap>
               {props.stack.map((stck: any) => (
-                <Tag colorScheme="teal" key={stck}>
+                <WrapItem key={stck} as={Tag} colorScheme="teal">
                   {stck}
-                </Tag>
+                </WrapItem>
               ))}
-            </HStack>
+            </Wrap>
           </VStack>
         </Flex>
       </MotionBox>
@@ -63,10 +66,32 @@ const ProjectPreviewCard = (props: any) => {
 
 const ProjectList = () => {
   const [projects, setProjects] = useState(allProjects);
+  const router = useRouter();
+
+  const filterProjects = (query: string) => {
+    return allProjects.filter(
+      (project) =>
+        project.name.toLowerCase().includes(query.toLowerCase()) ||
+        project.stack.find((stck) => stck.toLowerCase().includes(query.toLowerCase())) != undefined
+    );
+  };
 
   const handleSearch = (e: any) => {
-    setProjects(allProjects.filter((project) => project.name.toLowerCase().includes(e.target.value.toLowerCase())));
+    if (e.target.value == "" || e.target.value == undefined) {
+      setProjects(allProjects);
+    } else {
+      setProjects(filterProjects(e.target.value));
+    }
   };
+
+  useEffect(() => {
+    console.log(router.query);
+    if (router.query.stack) {
+      setProjects(filterProjects(router.query.stack as string));
+    } else if (router.query.search) {
+      setProjects(filterProjects(router.query.search as string));
+    }
+  }, [router.query.stack, router.query.search]);
 
   return (
     <PageLayout>
@@ -74,9 +99,9 @@ const ProjectList = () => {
         <Box>
           <Heading>Projects</Heading>
           <Text mt="1rem">This space is dedicated to show my projects.</Text>
-          <InputGroup mt="2rem">
+          <InputGroup mt="2rem" size="lg">
             <Input
-              onChange={handleSearch}
+              onChange={useMemo(() => handleSearch, [])}
               bgColor={useColorModeValue("blackAlpha.200", "whiteAlpha.200")}
               variant="filled"
               placeholder="Search projects or tags..."
@@ -86,8 +111,8 @@ const ProjectList = () => {
                   "0 0 800px 80px rgba(255, 255, 255, 0.2)"
                 ),
               }}
-              size="lg"
               transition="0.5s ease-in-out"
+              defaultValue={router.query.stack || router.query.search || ""}
             />
             <InputRightElement>
               <Icon as={IoSearch} />
