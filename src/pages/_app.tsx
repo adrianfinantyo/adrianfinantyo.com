@@ -8,7 +8,7 @@ import NextNProgress from "nextjs-progressbar";
 
 const config = {
   useSystemColorMode: true,
-  initialColorMode: "light",
+  // initialColorMode: "light",
 };
 
 const styles = {

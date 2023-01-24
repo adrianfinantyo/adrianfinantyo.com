@@ -79,8 +79,8 @@
         "title": "College assignment to create a news portal website using React JS",
         "name": "News Portal Website",
         "date": "2021-12-16",
-        "cover": "/images/projects/ufest2021/cover.png",
-        "logo": "/images/projects/ufest2021/logo.png",
+        "cover": "/images/projects/news-portal-uas/cover.png",
+        "logo": "/images/projects/news-portal-uas/logo.png",
         "published": true,
         "stack": [
           "React JS",
@@ -88,6 +88,7 @@
           "Chakra UI",
           "Netlify"
         ],
+        "projectLink": "https://uaslabpti.netlify.app",
         "githubLink": "https://github.com/lifosmin/UASLabPTI",
         "description": "News Portal Website is a website that is used to provide a news. This website was created for Introduction to Internet Technology course at Universitas Multimedia Nusantara.",
         "body": {
@@ -106,7 +107,7 @@
         "id": "react-news-portal",
         "slug": "news-portal-website"
       },
-      "documentHash": "1674456618197",
+      "documentHash": "1674580496828",
       "hasWarnings": false,
       "documentTypeName": "Project"
     },
@@ -143,6 +144,43 @@
         "slug": "umn-festival-2021's-website"
       },
       "documentHash": "1674454671827",
+      "hasWarnings": false,
+      "documentTypeName": "Project"
+    },
+    "projects/magfin.md": {
+      "document": {
+        "title": "Make interactive magazine with React JS and Chakra UI",
+        "name": "MagFin (Magot Finance) Android Mobile Application",
+        "date": "2022-09-18",
+        "cover": "/images/projects/magfin/cover.png",
+        "logo": "/images/projects/magfin/logo.png",
+        "published": true,
+        "stack": [
+          "Java",
+          "Laravel",
+          "React JS",
+          "Vite"
+        ],
+        "projectLink": "https://play.google.com/store/apps/details?id=umn.ac.id.project.maggot",
+        "githubLink": "https://github.com/atras30/maggot-finance",
+        "description": "MagFin android mobile application was created to meet the needs of the Kampung TEMPE program in order to reduce household organic waste and increase community economic growth in JatiMulya, Sepatan Timur, Tangerang, Banten. This project is the result of collaboration between Multimedia Nusantara University and Bapeda of Tangerang Regency which is used as a means to make it easier for them to make transactions and record every transaction that occurs in maggot buying and selling activities.",
+        "body": {
+          "raw": "",
+          "html": ""
+        },
+        "_id": "projects/magfin.md",
+        "_raw": {
+          "sourceFilePath": "projects/magfin.md",
+          "sourceFileName": "magfin.md",
+          "sourceFileDir": "projects",
+          "contentType": "markdown",
+          "flattenedPath": "projects/magfin"
+        },
+        "type": "Project",
+        "id": "magfin",
+        "slug": "magfin-(magot-finance)-android-mobile-application"
+      },
+      "documentHash": "1674579354455",
       "hasWarnings": false,
       "documentTypeName": "Project"
     }

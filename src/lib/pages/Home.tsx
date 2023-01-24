@@ -17,10 +17,11 @@ import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { allPosts, allProjects } from "contentlayer/generated";
+import { allPosts as RawPosts, allProjects as RawProjects } from "contentlayer/generated";
 import moment from "moment";
 import { transition } from "../constants/anim";
-import { useRef, useState } from "react";
+import Lottie from "lottie-react";
+import typeCode from "@/lib/assets/lottie/code-typing.json";
 
 const MotionImg = motion(Img);
 const MotionLink = motion(Link);
@@ -48,8 +49,6 @@ const animTextCard = {
 };
 
 const ProjectCard = (props: any) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
   return (
     <GridItem
       as={MotionLink}
@@ -65,10 +64,6 @@ const ProjectCard = (props: any) => {
           variants={animImgCard}
           src={props.cover}
           transition={transition.defaultSpring}
-          onLoad={() => {
-            setIsLoaded(true);
-            console.log("loaded");
-          }}
         />
       </AspectRatio>
       <motion.span
@@ -118,7 +113,9 @@ const RecentPostCard = (props: any) => {
 };
 
 const Home = () => {
-  console.log(allProjects);
+  const allProjects = RawProjects.filter((project) => project.published);
+  const allPosts = RawPosts.filter((post) => post.published);
+
   return (
     <PageLayout>
       {/* Profile Introduction */}
@@ -128,7 +125,7 @@ const Home = () => {
         alignItems="center"
         w="100%"
         minH="70vh"
-        gap="2rem"
+        gap={{ base: 0, lg: "2rem" }}
       >
         <VStack
           mt={{ base: "2rem", lg: 0 }}
@@ -137,22 +134,31 @@ const Home = () => {
           spacing={{ base: "1rem", md: "2rem" }}
           textAlign={{ base: "center", lg: "left" }}
         >
-          <Heading fontSize={{ base: "2xl", md: "4xl", "2xl": "6xl" }}>Bonifasius Ariesto Adrian Finantyo</Heading>
+          <Link href="/about">
+            <Heading fontSize={{ base: "2xl", md: "4xl", "2xl": "6xl" }}>Bonifasius Ariesto Adrian Finantyo</Heading>
+          </Link>
           <Text fontSize={{ base: "md", md: "lg", xl: "xl", "2xl": "2xl" }}>
             👋 Hi! I&apos;m a Software Engineer based in Indonesia.
           </Text>
         </VStack>
-        <Img
+        {/* <Img
           w={{ base: "280px", md: "300px", lg: "250px", "2xl": "350px" }}
           src="/images/adrianfinantyo-profilepict.png"
           borderRadius="50px"
+        /> */}
+        <Img
+          as={Lottie}
+          animationData={typeCode}
+          loop={true}
+          w={{ base: "250px", md: "500px", lg: "400px", "2xl": "800px" }}
+          src="/images/adrianfinantyo-profilepict.png"
         />
       </Flex>
       {/* // Projects */}
       <Box mt="3rem">
         <Heading>Projects</Heading>
         <Grid py="1rem" my="1rem" templateColumns={{ base: "1fr", md: "1fr 1fr" }} gap="2rem">
-          {allProjects.map((project) => (
+          {allProjects.slice(0, 4).map((project) => (
             <ProjectCard key={project.id} {...project} />
           ))}
         </Grid>
@@ -162,7 +168,7 @@ const Home = () => {
       <Box mt="3rem">
         <Heading>Recent Posts</Heading>
         <VStack my="1rem" py="1rem" spacing="2rem">
-          {allPosts.map((post) => (
+          {allPosts.slice(0, 6).map((post) => (
             <RecentPostCard key={post.id} {...post} />
           ))}
         </VStack>

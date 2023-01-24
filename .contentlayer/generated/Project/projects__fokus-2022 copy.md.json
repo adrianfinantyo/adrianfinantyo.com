@@ -1,0 +1,32 @@
+{
+  "title": "Make interactive magazine with React JS and Chakra UI",
+  "name": "FOKUS ULTIMAGZ 2022: Napza",
+  "date": "2022-09-18",
+  "cover": "/images/projects/fokus2022/cover.png",
+  "logo": "/images/projects/fokus2022/logo.jpg",
+  "published": true,
+  "stack": [
+    "React JS",
+    "Firebase",
+    "Chakra UI",
+    "Netlify"
+  ],
+  "projectLink": "https://fokus.ultimagz.com/articles/napza",
+  "githubLink": "https://github.com/IT-ULTIMAGZ/fokus-2022-react",
+  "description": "Fokus is an interactive magazine that is published by Ultimagz. This magazine is published every year and it is used to provide information about one topic. In 2022, Fokus raised a theme of NAPZA. Also in 2022, we move forward from developing with vanilla to React JS and Chakra UI.",
+  "body": {
+    "raw": "",
+    "html": ""
+  },
+  "_id": "projects/fokus-2022 copy.md",
+  "_raw": {
+    "sourceFilePath": "projects/fokus-2022 copy.md",
+    "sourceFileName": "fokus-2022 copy.md",
+    "sourceFileDir": "projects",
+    "contentType": "markdown",
+    "flattenedPath": "projects/fokus-2022 copy"
+  },
+  "type": "Project",
+  "id": "fokus-2022 copy",
+  "slug": "fokus-ultimagz-2022:-napza"
+}
