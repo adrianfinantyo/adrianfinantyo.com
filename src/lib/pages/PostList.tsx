@@ -75,8 +75,8 @@ const PostList = () => {
               placeholder="Search posts..."
               _focus={{
                 boxShadow: useColorModeValue(
-                  "0 0 800px 80px rgba(0, 0, 0, 0.2)",
-                  "0 0 800px 80px rgba(255, 255, 255, 0.2)"
+                  "0 0 800px 80px rgba(66, 153, 225, 0.4)",
+                  "0 0 800px 80px rgba(255, 255, 255, 0.1)"
                 ),
               }}
               transition="0.5s ease-in-out"

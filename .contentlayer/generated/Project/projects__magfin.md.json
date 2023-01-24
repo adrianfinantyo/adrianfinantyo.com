@@ -1,0 +1,32 @@
+{
+  "title": "Make interactive magazine with React JS and Chakra UI",
+  "name": "MagFin (Magot Finance) Android Mobile Application",
+  "date": "2022-09-18",
+  "cover": "/images/projects/magfin/cover.png",
+  "logo": "/images/projects/magfin/logo.png",
+  "published": true,
+  "stack": [
+    "Java",
+    "Laravel",
+    "React JS",
+    "Vite"
+  ],
+  "projectLink": "https://play.google.com/store/apps/details?id=umn.ac.id.project.maggot",
+  "githubLink": "https://github.com/atras30/maggot-finance",
+  "description": "MagFin android mobile application was created to meet the needs of the Kampung TEMPE program in order to reduce household organic waste and increase community economic growth in JatiMulya, Sepatan Timur, Tangerang, Banten. This project is the result of collaboration between Multimedia Nusantara University and Bapeda of Tangerang Regency which is used as a means to make it easier for them to make transactions and record every transaction that occurs in maggot buying and selling activities.",
+  "body": {
+    "raw": "",
+    "html": ""
+  },
+  "_id": "projects/magfin.md",
+  "_raw": {
+    "sourceFilePath": "projects/magfin.md",
+    "sourceFileName": "magfin.md",
+    "sourceFileDir": "projects",
+    "contentType": "markdown",
+    "flattenedPath": "projects/magfin"
+  },
+  "type": "Project",
+  "id": "magfin",
+  "slug": "magfin-(magot-finance)-android-mobile-application"
+}
