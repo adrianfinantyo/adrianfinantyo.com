@@ -35,6 +35,7 @@ export type Project = {
   title: string
   name: string
   date: string
+  feautured: boolean
   cover: string
   logo: string
   published: boolean

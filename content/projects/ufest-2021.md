@@ -2,6 +2,7 @@
 title: The main website for organizing the 2022 UMN Festival event
 name: UMN Festival 2021's Website
 date: "2021-01-30"
+feautured: false
 cover: /images/projects/ufest2021/cover.png
 logo: /images/projects/ufest2021/logo.png
 published: true

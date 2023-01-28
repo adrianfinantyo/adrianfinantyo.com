@@ -15,7 +15,7 @@ import {
   InputGroup,
   Icon,
 } from "@chakra-ui/react";
-import { allPosts } from "contentlayer/generated";
+import { allPosts } from "@/lib/utils/content";
 import { motion } from "framer-motion";
 import moment from "moment";
 import Link from "next/link";

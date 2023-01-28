@@ -66,3 +66,10 @@ export const navigationItem = [
     icon: IoPerson,
   },
 ];
+
+export const externalLink = [
+  {
+    label: "📖 Knowledge Center",
+    href: "https://kc.adrianfinantyo.com",
+  },
+];

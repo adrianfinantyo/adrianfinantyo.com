@@ -17,7 +17,7 @@ import PageLayout from "@/lib/components/PageLayout";
 import { ReadMoreBtn } from "@/lib/components/shared";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { allPosts as RawPosts, allProjects as RawProjects } from "contentlayer/generated";
+import { allPosts, allProjects } from "@/lib/utils/content";
 import moment from "moment";
 import { transition } from "../constants/anim";
 import Lottie from "lottie-react";
@@ -113,9 +113,6 @@ const RecentPostCard = (props: any) => {
 };
 
 const Home = () => {
-  const allProjects = RawProjects.filter((project) => project.published);
-  const allPosts = RawPosts.filter((post) => post.published);
-
   return (
     <PageLayout>
       {/* Profile Introduction */}
