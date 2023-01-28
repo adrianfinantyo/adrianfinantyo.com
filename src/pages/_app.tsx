@@ -45,7 +45,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <ChakraProvider theme={theme}>
       <Container maxW={{ base: "container.sm", "2xl": "container.lg" }}>
         <Navbar />
-        <Box pt="8rem" css={{}}>
+        <Box pt="8rem">
           <NextNProgress color="#4299E1" />
           <DefaultSeo {...SEOConfig} />
           <Component {...pageProps} />
