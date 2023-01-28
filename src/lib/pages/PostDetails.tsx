@@ -1,5 +1,5 @@
 import PageLayout from "../components/PageLayout";
-import { allPosts } from "contentlayer/generated";
+import { utils } from "@/lib/utils/content";
 import { useRouter } from "next/router";
 import { Flex, HStack, Avatar, VStack, Heading, Text, Box, Divider, Img, AspectRatio } from "@chakra-ui/react";
 import moment from "moment";
@@ -7,44 +7,27 @@ import ReactMarkdown from "react-markdown";
 import { motion } from "framer-motion";
 import ChakraUIRenderer from "chakra-ui-markdown-renderer";
 import rehypeRaw from "rehype-raw";
-import { IoLink, IoLogoFacebook, IoLogoTwitter, IoLogoWhatsapp } from "react-icons/io5";
+import { IoLink, IoLogoTwitter, IoLogoWhatsapp, IoShareSocial } from "react-icons/io5";
 import { NavLink } from "../components/shared";
+import { useCallback } from "react";
 
 const PostDetails = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-  const postData = allPosts.find((post) => post.slug === slug);
-  console.log(postData);
+  const postData = utils.getPostBySlug(slug as string);
 
-  const generateSharedText = () => {
-    const msg = `Check out this article: "${postData?.title}" on ${window.location.href}`;
-    return decodeURI(msg);
-  };
-
-  const social = [
-    {
-      label: "share to twitter",
-      icon: IoLogoTwitter,
-      action: () => {
-        window.open(`https://twitter.com/intent/tweet?url=${generateSharedText()}`, "_blank");
-      },
-    },
-    {
-      label: "share to whatsapp",
-      icon: IoLogoWhatsapp,
-      action: () => {
-        window.open(`https://api.whatsapp.com/send?text=${generateSharedText()}`, "_blank");
-      },
-    },
-    {
-      label: "copy to clipboard",
-      icon: IoLink,
-      action: () => {
-        navigator.clipboard.writeText(generateSharedText());
-      },
-    },
-  ];
+  const handleSharePost = useCallback(() => {
+    if (navigator.share) {
+      navigator.share({
+        title: postData?.title,
+        text: `Check out this article: "${postData?.title}"`,
+        url: window.location.href,
+      });
+    } else {
+      navigator.clipboard.writeText(`Check out this article: "${postData?.title}" on ${window.location.href}`);
+    }
+  }, []);
 
   return (
     <PageLayout>
@@ -60,11 +43,7 @@ const PostDetails = () => {
             <Text>
               {moment(postData?.date).format("MMM Do, YYYY")} - {postData?.readTime?.text}
             </Text>
-            <HStack spacing="0.5rem" fontSize="xs">
-              {social.map((item: any, index: number) => (
-                <NavLink key={item.label} {...item} variant="solid" />
-              ))}
-            </HStack>
+            <NavLink icon={IoShareSocial} label="share this post" action={handleSharePost} variant="solid" />
           </VStack>
         </HStack>
       </Flex>

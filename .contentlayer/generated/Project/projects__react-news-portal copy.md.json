@@ -19,15 +19,15 @@
     "raw": "",
     "html": ""
   },
-  "_id": "projects/react-news-portal.md",
+  "_id": "projects/react-news-portal copy.md",
   "_raw": {
-    "sourceFilePath": "projects/react-news-portal.md",
-    "sourceFileName": "react-news-portal.md",
+    "sourceFilePath": "projects/react-news-portal copy.md",
+    "sourceFileName": "react-news-portal copy.md",
     "sourceFileDir": "projects",
     "contentType": "markdown",
-    "flattenedPath": "projects/react-news-portal"
+    "flattenedPath": "projects/react-news-portal copy"
   },
   "type": "Project",
-  "id": "react-news-portal",
+  "id": "react-news-portal copy",
   "slug": "news-portal-website"
 }

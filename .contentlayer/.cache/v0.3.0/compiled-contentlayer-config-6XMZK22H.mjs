@@ -51,6 +51,7 @@ var Project = defineDocumentType(() => ({
     title: { type: "string", required: true },
     name: { type: "string", required: true },
     date: { type: "string", required: true },
+    feautured: { type: "boolean", required: true },
     cover: { type: "string", required: true },
     logo: { type: "string", required: true },
     published: { type: "boolean", required: true },
@@ -83,4 +84,4 @@ var contentlayer_config_default = contentLayerConfig;
 export {
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-UPJ5FCT3.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-6XMZK22H.mjs.map

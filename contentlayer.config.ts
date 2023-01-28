@@ -53,6 +53,7 @@ const Project = defineDocumentType(() => ({
     title: { type: "string", required: true },
     name: { type: "string", required: true },
     date: { type: "string", required: true },
+    feautured: { type: "boolean", required: true },
     cover: { type: "string", required: true },
     logo: { type: "string", required: true },
     published: { type: "boolean", required: true },

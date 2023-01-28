@@ -5,6 +5,8 @@ import { mode } from "@chakra-ui/theme-tools";
 import Navbar from "@/lib/components/Navbar";
 import Footer from "@/lib/components/Footer";
 import NextNProgress from "nextjs-progressbar";
+import { DefaultSeo } from "next-seo";
+import { SEOConfig } from "@/lib/constants/config";
 
 const config = {
   useSystemColorMode: true,
@@ -45,6 +47,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Navbar />
         <Box pt="8rem" css={{}}>
           <NextNProgress color="#4299E1" />
+          <DefaultSeo {...SEOConfig} />
           <Component {...pageProps} />
         </Box>
         <Footer pb={{ base: "10rem", md: "8rem" }} />

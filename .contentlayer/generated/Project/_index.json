@@ -3,6 +3,7 @@
     "title": "Make interactive magazine with React JS and Chakra UI",
     "name": "FOKUS ULTIMAGZ 2022: Napza",
     "date": "2022-09-18",
+    "feautured": false,
     "cover": "/images/projects/fokus2022/cover.png",
     "logo": "/images/projects/fokus2022/logo.jpg",
     "published": true,
@@ -32,9 +33,43 @@
     "slug": "fokus-ultimagz-2022:-napza"
   },
   {
+    "title": "Make interactive magazine with React JS and Chakra UI",
+    "name": "MagFin (Magot Finance) Android Mobile Application",
+    "date": "2022-09-18",
+    "feautured": true,
+    "cover": "/images/projects/magfin/cover.png",
+    "logo": "/images/projects/magfin/logo.png",
+    "published": true,
+    "stack": [
+      "Java",
+      "Laravel",
+      "React JS",
+      "Vite"
+    ],
+    "projectLink": "https://play.google.com/store/apps/details?id=umn.ac.id.project.maggot",
+    "githubLink": "https://github.com/atras30/maggot-finance",
+    "description": "MagFin android mobile application was created to meet the needs of the Kampung TEMPE program in order to reduce household organic waste and increase community economic growth in JatiMulya, Sepatan Timur, Tangerang, Banten. This project is the result of collaboration between Multimedia Nusantara University and Bapeda of Tangerang Regency which is used as a means to make it easier for them to make transactions and record every transaction that occurs in maggot buying and selling activities.",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "projects/magfin.md",
+    "_raw": {
+      "sourceFilePath": "projects/magfin.md",
+      "sourceFileName": "magfin.md",
+      "sourceFileDir": "projects",
+      "contentType": "markdown",
+      "flattenedPath": "projects/magfin"
+    },
+    "type": "Project",
+    "id": "magfin",
+    "slug": "magfin-(magot-finance)-android-mobile-application"
+  },
+  {
     "title": "College assignment to create a news portal website using React JS",
     "name": "News Portal Website",
     "date": "2021-12-16",
+    "feautured": false,
     "cover": "/images/projects/news-portal-uas/cover.png",
     "logo": "/images/projects/news-portal-uas/logo.png",
     "published": true,
@@ -67,6 +102,7 @@
     "title": "The main website for organizing the 2022 UMN Festival event",
     "name": "UMN Festival 2021's Website",
     "date": "2021-01-30",
+    "feautured": false,
     "cover": "/images/projects/ufest2021/cover.png",
     "logo": "/images/projects/ufest2021/logo.png",
     "published": true,
@@ -95,35 +131,37 @@
     "slug": "umn-festival-2021's-website"
   },
   {
-    "title": "Make interactive magazine with React JS and Chakra UI",
-    "name": "MagFin (Magot Finance) Android Mobile Application",
-    "date": "2022-09-18",
-    "cover": "/images/projects/magfin/cover.png",
-    "logo": "/images/projects/magfin/logo.png",
+    "title": "Web app to display random quotes with public APIs",
+    "name": "QotD (Quotes of the Day)",
+    "date": "2023-01-27",
+    "feautured": true,
+    "cover": "/images/projects/qotd/cover.png",
+    "logo": "/images/projects/qotd/logo.png",
     "published": true,
     "stack": [
-      "Java",
-      "Laravel",
-      "React JS",
-      "Vite"
+      "TypeScript",
+      "Next JS",
+      "Nextra",
+      "Chakra UI",
+      "Vercel"
     ],
-    "projectLink": "https://play.google.com/store/apps/details?id=umn.ac.id.project.maggot",
-    "githubLink": "https://github.com/atras30/maggot-finance",
-    "description": "MagFin android mobile application was created to meet the needs of the Kampung TEMPE program in order to reduce household organic waste and increase community economic growth in JatiMulya, Sepatan Timur, Tangerang, Banten. This project is the result of collaboration between Multimedia Nusantara University and Bapeda of Tangerang Regency which is used as a means to make it easier for them to make transactions and record every transaction that occurs in maggot buying and selling activities.",
+    "projectLink": "https://af-qotd.vercel.app",
+    "githubLink": "https://github.com/adrianfinantyo/quotes-of-the-day-nextjs",
+    "description": "QotD a.k.a Quotes of the Day(opens in a new tab) is a simple app that displays a random quote from a list of quotes(opens in a new tab). This app is built using TypeScript, Next(opens in a new tab), and Chakra UI(opens in a new tab).",
     "body": {
       "raw": "",
       "html": ""
     },
-    "_id": "projects/magfin.md",
+    "_id": "projects/qotd.md",
     "_raw": {
-      "sourceFilePath": "projects/magfin.md",
-      "sourceFileName": "magfin.md",
+      "sourceFilePath": "projects/qotd.md",
+      "sourceFileName": "qotd.md",
       "sourceFileDir": "projects",
       "contentType": "markdown",
-      "flattenedPath": "projects/magfin"
+      "flattenedPath": "projects/qotd"
     },
     "type": "Project",
-    "id": "magfin",
-    "slug": "magfin-(magot-finance)-android-mobile-application"
+    "id": "qotd",
+    "slug": "qotd-(quotes-of-the-day)"
   }
 ]

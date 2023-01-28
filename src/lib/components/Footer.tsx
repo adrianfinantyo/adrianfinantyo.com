@@ -7,7 +7,7 @@ const Footer = (props: any) => {
     <Box as="footer" {...props}>
       <Divider my="3rem" h="5px" w="100%" />
       <VStack alignItems="flex-start">
-        <HStack my="2rem" textTransform="capitalize" spacing="1rem">
+        <HStack my="1rem" textTransform="capitalize" spacing="1rem">
           {navigationItem.map((item) => (
             <Link href={item.href} key={item.label}>
               {item.label}

@@ -20,13 +20,15 @@ import {
   Tag,
   Wrap,
   WrapItem,
+  Button,
 } from "@chakra-ui/react";
-import { allProjects } from "contentlayer/generated";
+import { allProjects, utils } from "@/lib/utils/content";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useMemo, useState } from "react";
 import { IoSearch } from "react-icons/io5";
+import { FaBookmark } from "react-icons/fa";
 
 const MotionBox = motion(Box);
 
@@ -41,7 +43,21 @@ const ProjectPreviewCard = (props: any) => {
         bgColor={useColorModeValue("gray.300", "blue.800")}
         whileHover={{ scale: 1.02 }}
         transition={transition.defaultSpring}
+        pos="relative"
       >
+        {props.feautured && (
+          <Button
+            pos="absolute"
+            top="1rem"
+            right="1rem"
+            zIndex={1}
+            rightIcon={<Icon as={FaBookmark} />}
+            colorScheme="yellow"
+            size="sm"
+          >
+            Featured
+          </Button>
+        )}
         <AspectRatio ratio={2 / 1}>
           <Img src={props.cover} />
         </AspectRatio>
@@ -65,27 +81,28 @@ const ProjectPreviewCard = (props: any) => {
 };
 
 const ProjectList = () => {
-  const [projects, setProjects] = useState(allProjects);
+  const [projects, setProjects] = useState(utils.sortProjectFeaturedFirst(allProjects));
   const router = useRouter();
+
+  console.log(utils.sortProjectFeaturedFirst(allProjects));
 
   const filterProjects = (query: string) => {
     return allProjects.filter(
       (project) =>
         project.name.toLowerCase().includes(query.toLowerCase()) ||
-        project.stack.find((stck) => stck.toLowerCase().includes(query.toLowerCase())) != undefined
+        project.stack.find((stck: any) => stck.toLowerCase().includes(query.toLowerCase())) != undefined
     );
   };
 
   const handleSearch = (e: any) => {
     if (e.target.value == "" || e.target.value == undefined) {
-      setProjects(allProjects);
+      setProjects(utils.sortProjectFeaturedFirst(allProjects));
     } else {
-      setProjects(filterProjects(e.target.value));
+      setProjects(utils.sortProjectFeaturedFirst(filterProjects(e.target.value)));
     }
   };
 
   useEffect(() => {
-    console.log(router.query);
     if (router.query.stack) {
       setProjects(filterProjects(router.query.stack as string));
     } else if (router.query.search) {

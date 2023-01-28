@@ -1,5 +1,5 @@
 import PageLayout from "../components/PageLayout";
-import { allProjects } from "contentlayer/generated";
+import { utils } from "@/lib/utils/content";
 import { useRouter } from "next/router";
 import { Heading, Text, Img, AspectRatio, Avatar, Flex, VStack, HStack, Tag, Button, Icon } from "@chakra-ui/react";
 import DefaultErrorPage from "next/error";
@@ -10,7 +10,7 @@ const ProjectDetails = () => {
   const router = useRouter();
   const { slug } = router.query;
 
-  const postData = allProjects.find((project) => project.slug === slug);
+  const postData = utils.getProjectBySlug(slug as string);
 
   if (!postData) {
     return <DefaultErrorPage statusCode={404} />;
