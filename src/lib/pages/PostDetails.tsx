@@ -21,13 +21,12 @@ const PostDetails = () => {
     if (navigator.share) {
       navigator.share({
         title: postData?.title,
-        text: `Check out this article: "${postData?.title}"`,
-        url: window.location.href,
+        text: `Check out this article: "${postData?.title} on ${window.location.href}"`,
       });
     } else {
       navigator.clipboard.writeText(`Check out this article: "${postData?.title}" on ${window.location.href}`);
     }
-  }, []);
+  }, [postData]);
 
   return (
     <PageLayout>

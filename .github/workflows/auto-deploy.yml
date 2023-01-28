@@ -1,11 +1,4 @@
-on:
-  push: # Trigger the workflow on push or pull request
-    branches:
-      - Production
-    pull_request:
-      branches:
-        - Production
-
+on: push
 name: 🔗 Adrian's Website CI/CD
 jobs:
   web-deploy:
