@@ -40,7 +40,9 @@ export const social = [
   {
     icon: IoCodeSlash,
     label: "resume",
-    href: encodeURI("/uploads/Bonifasius_Ariesto_Adrian_Finantyo's_Resume.pdf"),
+    href: encodeURI(
+      "https://storage.googleapis.com/adrian-dicoding-portofolio/uploads/Bonifasius_Ariesto_Adrian_Finantyo's_Resume.pdf"
+    ),
   },
 ];
 

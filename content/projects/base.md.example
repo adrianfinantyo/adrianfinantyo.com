@@ -1,8 +1,8 @@
 ---
 name: Place your title here
 date: "YYYY-MM-DD"
-cover: /images/posts/your-img.ext
-logo: /images/posts/your-img.ext
+cover: https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/your-img.ext
+logo: https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/your-img.ext
 published: true | false 
 stacks:
   - stack 1

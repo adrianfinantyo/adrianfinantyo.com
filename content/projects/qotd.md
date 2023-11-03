@@ -3,8 +3,8 @@ title: Web app to display random quotes with public APIs
 name: QotD (Quotes of the Day)
 date: "2023-01-27"
 feautured: true
-cover: /images/projects/qotd/cover.png
-logo: /images/projects/qotd/logo.png
+cover: https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/qotd/cover.png
+logo: https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/qotd/logo.png
 published: true
 stack:
   - TypeScript

@@ -4,8 +4,8 @@
     "name": "FOKUS ULTIMAGZ 2022: Napza",
     "date": "2022-09-18",
     "feautured": false,
-    "cover": "/images/projects/fokus2022/cover.png",
-    "logo": "/images/projects/fokus2022/logo.jpg",
+    "cover": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/fokus2022/cover.png",
+    "logo": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/fokus2022/logo.jpg",
     "published": true,
     "stack": [
       "React JS",
@@ -37,8 +37,8 @@
     "name": "MagFin (Magot Finance) Android Mobile Application",
     "date": "2022-09-18",
     "feautured": true,
-    "cover": "/images/projects/magfin/cover.png",
-    "logo": "/images/projects/magfin/logo.png",
+    "cover": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/magfin/cover.png",
+    "logo": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/magfin/logo.png",
     "published": true,
     "stack": [
       "Java",
@@ -66,12 +66,46 @@
     "slug": "magfin-(magot-finance)-android-mobile-application"
   },
   {
+    "title": "Web app to display random quotes with public APIs",
+    "name": "QotD (Quotes of the Day)",
+    "date": "2023-01-27",
+    "feautured": true,
+    "cover": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/qotd/cover.png",
+    "logo": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/qotd/logo.png",
+    "published": true,
+    "stack": [
+      "TypeScript",
+      "Next JS",
+      "Nextra",
+      "Chakra UI",
+      "Vercel"
+    ],
+    "projectLink": "https://af-qotd.vercel.app",
+    "githubLink": "https://github.com/adrianfinantyo/quotes-of-the-day-nextjs",
+    "description": "QotD a.k.a Quotes of the Day(opens in a new tab) is a simple app that displays a random quote from a list of quotes(opens in a new tab). This app is built using TypeScript, Next(opens in a new tab), and Chakra UI(opens in a new tab).",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "projects/qotd.md",
+    "_raw": {
+      "sourceFilePath": "projects/qotd.md",
+      "sourceFileName": "qotd.md",
+      "sourceFileDir": "projects",
+      "contentType": "markdown",
+      "flattenedPath": "projects/qotd"
+    },
+    "type": "Project",
+    "id": "qotd",
+    "slug": "qotd-(quotes-of-the-day)"
+  },
+  {
     "title": "College assignment to create a news portal website using React JS",
     "name": "News Portal Website",
     "date": "2021-12-16",
     "feautured": false,
-    "cover": "/images/projects/news-portal-uas/cover.png",
-    "logo": "/images/projects/news-portal-uas/logo.png",
+    "cover": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/news-portal-uas/cover.png",
+    "logo": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/news-portal-uas/logo.png",
     "published": true,
     "stack": [
       "React JS",
@@ -103,8 +137,8 @@
     "name": "UMN Festival 2021's Website",
     "date": "2021-01-30",
     "feautured": false,
-    "cover": "/images/projects/ufest2021/cover.png",
-    "logo": "/images/projects/ufest2021/logo.png",
+    "cover": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/ufest2021/cover.png",
+    "logo": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/ufest2021/logo.png",
     "published": true,
     "stack": [
       "React JS",
@@ -129,39 +163,5 @@
     "type": "Project",
     "id": "ufest-2021",
     "slug": "umn-festival-2021's-website"
-  },
-  {
-    "title": "Web app to display random quotes with public APIs",
-    "name": "QotD (Quotes of the Day)",
-    "date": "2023-01-27",
-    "feautured": true,
-    "cover": "/images/projects/qotd/cover.png",
-    "logo": "/images/projects/qotd/logo.png",
-    "published": true,
-    "stack": [
-      "TypeScript",
-      "Next JS",
-      "Nextra",
-      "Chakra UI",
-      "Vercel"
-    ],
-    "projectLink": "https://af-qotd.vercel.app",
-    "githubLink": "https://github.com/adrianfinantyo/quotes-of-the-day-nextjs",
-    "description": "QotD a.k.a Quotes of the Day(opens in a new tab) is a simple app that displays a random quote from a list of quotes(opens in a new tab). This app is built using TypeScript, Next(opens in a new tab), and Chakra UI(opens in a new tab).",
-    "body": {
-      "raw": "",
-      "html": ""
-    },
-    "_id": "projects/qotd.md",
-    "_raw": {
-      "sourceFilePath": "projects/qotd.md",
-      "sourceFileName": "qotd.md",
-      "sourceFileDir": "projects",
-      "contentType": "markdown",
-      "flattenedPath": "projects/qotd"
-    },
-    "type": "Project",
-    "id": "qotd",
-    "slug": "qotd-(quotes-of-the-day)"
   }
 ]

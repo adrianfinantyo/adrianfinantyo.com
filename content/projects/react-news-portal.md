@@ -3,8 +3,8 @@ title: College assignment to create a news portal website using React JS
 name: News Portal Website
 date: "2021-12-16"
 feautured: false
-cover: /images/projects/news-portal-uas/cover.png
-logo: /images/projects/news-portal-uas/logo.png
+cover: https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/news-portal-uas/cover.png
+logo: https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/news-portal-uas/logo.png
 published: true
 stack:
   - React JS

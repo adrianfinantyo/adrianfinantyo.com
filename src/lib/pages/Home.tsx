@@ -140,7 +140,7 @@ const Home = () => {
         </VStack>
         {/* <Img
           w={{ base: "280px", md: "300px", lg: "250px", "2xl": "350px" }}
-          src="/images/adrianfinantyo-profilepict.png"
+          src="https://storage.googleapis.com/adrian-dicoding-portofolio/images/adrianfinantyo-profilepict.png"
           borderRadius="50px"
         /> */}
         <Img
@@ -148,7 +148,7 @@ const Home = () => {
           animationData={typeCode}
           loop={true}
           w={{ base: "250px", md: "500px", lg: "400px", "2xl": "800px" }}
-          src="/images/adrianfinantyo-profilepict.png"
+          src="https://storage.googleapis.com/adrian-dicoding-portofolio/images/adrianfinantyo-profilepict.png"
         />
       </Flex>
       {/* // Projects */}

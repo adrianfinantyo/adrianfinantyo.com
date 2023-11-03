@@ -1,7 +1,7 @@
 ---
 title: Place your title here
 date: "YYYY-MM-DD"
-cover: /images/posts/your-img.ext
+cover: https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/your-img.ext
 published: true | false 
 tags:
   - tag 1

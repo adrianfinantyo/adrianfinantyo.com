@@ -1,7 +1,7 @@
 ---
 title: First Experience as A Frontend Engineer at MAXIMA 2021
 date: "2021-05-13"
-cover: /images/posts/maxima2021/landing-page.jpg
+cover: https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/maxima2021/landing-page.jpg
 published: true
 tags:
   - React JS
@@ -14,7 +14,7 @@ Around May 2020 I had the opportunity to become a frontend engineer at the Maxim
 ## Introduction
 
 For about 11 months since May 2020, I worked on the website together with a team of 6 members and 2 supervisors. The website that was built has several features that can be used by users to provide content and connect users with the event committee through a series of activities.
-![Pictures of Landing Page Maxima 2021](/images/posts/maxima2021/fotobersama-1.png)
+![Pictures of Landing Page Maxima 2021](https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/maxima2021/fotobersama-1.png)
 
 ## Tech Stack
 
@@ -26,8 +26,8 @@ During this development period, I gained a lot of knowledge. Starting from build
 
 ## Result
 
-![Pictures of Login Page Maxima 2021](/images/posts/maxima2021/login-page.jpg)
-![Pictures of State Maxima 2021](/images/posts/maxima2021/state.png)
-![Pictures of HoME Maxima 2021](/images/posts/maxima2021/home.png)
-![Pictures of Dashboard Panitia Maxima 2021](/images/posts/maxima2021/dashboard.png)
-![Pictures of Dashboard Details Maxima 2021](/images/posts/maxima2021/dashboard-detail.png)
+![Pictures of Login Page Maxima 2021](https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/maxima2021/login-page.jpg)
+![Pictures of State Maxima 2021](https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/maxima2021/state.png)
+![Pictures of HoME Maxima 2021](https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/maxima2021/home.png)
+![Pictures of Dashboard Panitia Maxima 2021](https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/maxima2021/dashboard.png)
+![Pictures of Dashboard Details Maxima 2021](https://storage.googleapis.com/adrian-dicoding-portofolio/images/posts/maxima2021/dashboard-detail.png)

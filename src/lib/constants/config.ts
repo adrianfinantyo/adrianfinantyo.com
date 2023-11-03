@@ -13,7 +13,7 @@ export const SEOConfig = {
     site_name: "Adrian Finantyo's Personal Website",
     images: [
       {
-        url: "https://adrianfinantyo.com/images/adrianweb-og.png",
+        url: "https://adrianfinantyo.comhttps://storage.googleapis.com/adrian-dicoding-portofolio/images/adrianweb-og.png",
         width: 1200,
         height: 630,
         alt: "Adrian Finantyo OG Image",

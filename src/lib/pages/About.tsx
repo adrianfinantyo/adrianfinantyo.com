@@ -25,7 +25,7 @@ const About: React.FC = () => {
         </Heading>
         <Img
           w={{ base: "280px", md: "300px", lg: "250px", "2xl": "350px" }}
-          src="/images/adrianfinantyo-profilepict.png"
+          src="https://storage.googleapis.com/adrian-dicoding-portofolio/images/adrianfinantyo-profilepict.png"
           borderRadius="50%"
         />
       </Flex>

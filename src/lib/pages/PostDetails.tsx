@@ -36,7 +36,11 @@ const PostDetails = () => {
       <Heading fontSize={{ base: "3xl", xl: "6xl" }}>{postData?.title}</Heading>
       <Flex justifyContent="space-between" my={{ base: "2rem", md: "3rem" }}>
         <HStack spacing="1.5rem" mb="1rem">
-          <Avatar size="lg" name="Adrian Finantyo" src="/images/adrianfinantyo-profilepict.png" />
+          <Avatar
+            size="lg"
+            name="Adrian Finantyo"
+            src="https://storage.googleapis.com/adrian-dicoding-portofolio/images/adrianfinantyo-profilepict.png"
+          />
           <VStack alignItems="flex-start" spacing="0.2rem">
             <Heading size="md">Bonifasius Ariesto Adrian Finantyo</Heading>
             <Text>

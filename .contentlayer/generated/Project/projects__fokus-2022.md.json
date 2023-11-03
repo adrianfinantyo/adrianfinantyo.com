@@ -3,8 +3,8 @@
   "name": "FOKUS ULTIMAGZ 2022: Napza",
   "date": "2022-09-18",
   "feautured": false,
-  "cover": "/images/projects/fokus2022/cover.png",
-  "logo": "/images/projects/fokus2022/logo.jpg",
+  "cover": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/fokus2022/cover.png",
+  "logo": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/fokus2022/logo.jpg",
   "published": true,
   "stack": [
     "React JS",

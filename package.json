@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "winstart": "SET NODE_ENV=production & node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gcp:build": "next build && next export",
+    "gcp:deploy": "gcloud app deploy app.yaml --quiet"
+  },
+  "engines": {
+    "node": "20.x"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.4.9",

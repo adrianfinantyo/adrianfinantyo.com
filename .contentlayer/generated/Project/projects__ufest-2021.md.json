@@ -3,8 +3,8 @@
   "name": "UMN Festival 2021's Website",
   "date": "2021-01-30",
   "feautured": false,
-  "cover": "/images/projects/ufest2021/cover.png",
-  "logo": "/images/projects/ufest2021/logo.png",
+  "cover": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/ufest2021/cover.png",
+  "logo": "https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/ufest2021/logo.png",
   "published": true,
   "stack": [
     "React JS",

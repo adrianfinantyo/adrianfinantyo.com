@@ -3,8 +3,8 @@ title: Make interactive magazine with React JS and Chakra UI
 name: MagFin (Magot Finance) Android Mobile Application
 date: "2022-09-18"
 feautured: true
-cover: /images/projects/magfin/cover.png
-logo: /images/projects/magfin/logo.png
+cover: https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/magfin/cover.png
+logo: https://storage.googleapis.com/adrian-dicoding-portofolio/images/projects/magfin/logo.png
 published: true
 stack:
   - Java
